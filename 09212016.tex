@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt]{article}
+\begin{document}
+9/21 - 9/28
+\\Notes are written down for all papers that I have read in this week. 
+\begin{enumerate}
+	\item SSO social spider optimization\cite{Cuevas_A_2013}
+	\\Two search agent: male and female, three operators, share the communication
+	
+	\item SSO-C SSO for constrained optimization\cite{Cuevas_A_2014}
+	\\Modify: penalty function, criterion to bias. Provide an application on mechanical problem
+	
+	\item SMS algorithm\cite{Cuevas_An_2014} has three states: gas, liquid and solid, which are sperated with the proportion iteration numbers. Gas state focus on exploration, liquid is a transit state, while solid focus on exploitation.
+	
+	\item This paper \cite{Anthony_Ap_2013} indicates the methology of dealing with raw data and try to build a model from it. I cannot fully understand all theories, and needs more investigation on it.
+	\\He collected cellular data, and analysis data try to address some patterns in it. There are some parameters need to be considered like assortativity, clustering coefficient,  degree distribution,  mean degree. The popular model like ER random graph cannot resolve assortativity.
+	\\Introduced a  physical model: maximum emtropy principle. He also addressed that ER random graph is the result of maximum entropy principle.
+	%A new partition function 
+	%An agent is for the modeled data. like a virtual vertex to represent the social ties. It knows its own social topology but know nothing about others
+	%Establish a difinition of link reciprocity, the protential difference. 
+	\\An agent based model and some parameters activity, energy and inverse temperature  \(\beta\) are broght in for the new model.
+	\\Hot regime (low \(\beta\)) represents gas state.
+	\\Cold regime (high \(\beta\)) represents liquid state.
+	
+	\item It proposed a self-detect method to rapidly recover from damage for the deployed robot itself. \cite{Cully_Robots_2015}
+	\\There is a map of behavior-performace space.
+	\\All of these ideas are technically captured via a Gaussian process model, which approximates the performance function with already acquired data, and a Bayesian optimization procedure
+	\\ adapting to new environments
+	\\The robot selects which behaviours to test by maximizing an information acquisition function that balances exploration (selecting points whose performance is uncertain) and exploitation (selecting points whose performance is expected to be high) (see Supplementary Methods). 
+	
+	\item It is announced it bridges the gap between practice and theory. Constraint programming relating. \cite{Cooper_Broken_2016} I cannot understand the proving and hard to understand where it can be used for.
+	\\The BTP-merging the paper provided could reduce the total number of variable-value assignments.
+	
+	\item  A new approach to handle queries over incomplete databases. \cite{Libkin_Certain_2016} Skim
+	
+	\item GSO Group Search Optimizer\cite{He_Group_2009}
+	\\The original PS model consists of only producers and scroungers. For the optimization purpose, e.g., avoiding entrapments by local minima, we introduced the rangers
+	\\Apply GSO to ANN weight training
+	
+	\item MatLab toolbox’s default Levenberg–Marquardt algorithm to train.\cite{Vernon_Modeling_2014}
+	%Linear activation function
+	\\Validate the 16 social traits which relates to 3 factors, cross validate attributes to these 3 factors.
+	
+	\item CRO chemical reation optimization algorithm implementation. Go through the concepts, but hasn't tried to implemented yet. How to use in the applications. \cite{Lam_Chemical_2012}
+	
+	\item CRO for grid scheduling problem \cite{Xu_Chemical_2011}
+	\\Modify:   only one molecule is generated in the initialization stage; \(central energy buffer\neq 0\); iteration stage was divided into two parts. It is similar to SMS.
+	
+	\item RCCRO real coded chemical realtion optimaztion \cite{Lam_Real_2012}
+	\\Modification
+	\\Solution representation, Neighborhood search operator, boundary constraint handling
+	% why it has these modifications, it needs more consideration.
+	
+	\item CRO application: congnitive radio spectrum allocation\cite{Lam_Power_2013} Skim
+	
+	\item POA physarum optimization algorithm to solve MEP Minimal exposure problem and general steiner problem\cite{Song_A_2014} %probably needs more read
+	\\Connect the food sources in shorter and thicker tubes through less dangerous areas
+	
+	\item POA to solve steiner tree problem \cite{Liu_Physarum_2015}
+	\\Edge-cutting scheme and feedback-adjusting scheme to accelerate the convergence
+	
+
+	\item Group size and neocortex ratio were correlated with network efficiency \cite{Pasquaretta_Social_2014}
+	
+	\item \cite{Patra_A_2011}
+
+
+ \cite{Gurrutxaga_SEP_2010}	
+ \cite{Askarzadeh_Bird_2014}
+ \cite{Simon_Biogeography_2008}
+ \cite{Kashan_An_2013}
+ \cite{Kashan_An_2011}
+
+
+
+
+\end{enumerate}
+\today
+
+
+\bibliographystyle{plain}
+\bibliography{09212016}
+\end{document}
