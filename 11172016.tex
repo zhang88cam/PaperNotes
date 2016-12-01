@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Article Notes
+% LaTeX Template
+% Version 1.0 (1/10/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@latextemplates.com)
+% Christopher Eliot (christopher.eliot@hofstra.edu)
+% Anthony Dardis (anthony.dardis@hofstra.edu)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Default font size is 10pt, can alternatively be 11pt or 12pt
+a4paper, % Alternatively letterpaper for US letter
+onecolumn, % Alternatively onecolumn，twocolumn
+portrait % Alternatively portrait，landscape
+]{article}
+
+\usepackage{CJKutf8}
+
+\input{structure.tex} % Input the file specifying the document layout and structure
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\articletitle{A Continuous-Time Markov Decision Process-Based Method With Application in a Pursuit-Evasion Example} % The title of the article
+\articlecitation{\cite{Jia_A_2016}} % The BibTeX citation key from your bibliography
+
+\datenotesstarted{November 17, 2016} % The date when these notes were first made
+\docdate{\datenotesstarted; rev. \today} % The date when the notes were lasted updated (automatically the current date)
+
+\docauthor{QZ} % Your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+\pagestyle{myheadings} % Use custom headers
+\markright{\doctitle} % Place the article information into the header
+
+%----------------------------------------------------------------------------------------
+%	PRINT ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{plain} % Plain formatting on the first page
+
+\printtitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE NOTES
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction} % Unnumbered section
+
+连续的Markov决定链解决追逃问题
+\\ Pursuit-Evasion 是计算机领域很常见的问题？wiki解释大概猜测，这是图论的问题
+
+\begin{enumerate}
+\item  geometric formulation - continuous pursuit-evasion
+\item graph formulation - discrete pursuit-evasion (also called graph searching). 
+\end{enumerate}
+
+Pursuit-Evasion分为连续和离散两种，分别对应不同的求解方法
+
+\begin{enumerate}
+\item Optimal  control  problem 最优控制问题 - 连续
+\item Markov链 - 离散
+\end{enumerate}
+
+维度的增加会导致搜索空间的指数增加 （最优化问题在解决的方向）
+CTMDP可以解决MDP遇到的复杂动态系统无法解决的问题
+
+查论文
+ \\ S. Jia, X. Wang, X. Ji, and H. Zhu, “A continuous-time Markov decision process based method on pursuit-evasion problem,” in Proc. 19th
+ IFAC   World   Congr.,   vol.   19.   Cape   Town,   South   Africa,   Aug.   2014, pp. 620–625.
+
+
+A  Motivation
+
+%------------------------------------------------
+
+%\section{Methodology Overview} % Numbered section
+
+
+
+%------------------------------------------------
+
+%\section{Results Overview}
+
+
+
+%------------------------------------------------
+
+%\section{Discussion/Conclusions Overview}
+
+
+
+%------------------------------------------------
+
+\section*{Article Evaluation}
+需要仔细思考的问题
+\begin{description}
+\item[1]  Markov链一般用来解决什么问题 - 随机模型
+\item[2]  为什么Pursuit-Evasion是一个普遍问题，作为模型可以用来解决什么实际问题
+\item[3]  动态规划和Markov链之间的关系 - 
+动态规划解决Markov链的问题
+
+\end{description}
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{Reference} % Change the default bibliography title
+
+\bibliography{11162016} % Input your bibliography file
+
+%----------------------------------------------------------------------------------------
+\end{CJK*}
+\end{document}

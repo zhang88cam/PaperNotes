@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Article Notes
+% LaTeX Template
+% Version 1.0 (1/10/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@latextemplates.com)
+% Christopher Eliot (christopher.eliot@hofstra.edu)
+% Anthony Dardis (anthony.dardis@hofstra.edu)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Default font size is 10pt, can alternatively be 11pt or 12pt
+a4paper, % Alternatively letterpaper for US letter
+onecolumn, % Alternatively onecolumn，twocolumn
+portrait % Alternatively portrait，landscape
+]{article}
+
+\usepackage{CJKutf8}
+
+\input{structure.tex} % Input the file specifying the document layout and structure
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\articletitle{A  formalization  of  programs  in first-order  logicwith  a  discrete  linear  order} % The title of the article
+\articlecitation{\cite{Lin_A_2016}} % The BibTeX citation key from your bibliography
+
+\datenotesstarted{November 29, 2016} % The date when these notes were first made
+\docdate{\datenotesstarted; rev. \today} % The date when the notes were lasted updated (automatically the current date)
+
+\docauthor{QZ} % Your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+\pagestyle{myheadings} % Use custom headers
+\markright{\doctitle} % Place the article information into the header
+
+%----------------------------------------------------------------------------------------
+%	PRINT ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{plain} % Plain formatting on the first page
+
+\printtitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE NOTES
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction} % Unnumbered section
+
+本篇文章来自于AI，主要是关于编程语言的展现和推理。
+\\ imperative programming 指令式编程 
+\\ First-order logic 一阶逻辑， 一阶谓词演算
+
+\begin{enumerate}
+\item Dijkstra’s calculus of weakest preconditions （Predicate transformer semantics including by weakest-preconditions or by strongest-postconditions）
+\item Hoare’s  logic 霍尔逻辑 演绎系统
+\\  Hoare triple \( \{P\}C\{Q\}\)  
+\\ P 前置条件，Q后置条件，C命令，其中P,Q是断言。断言是谓词逻辑的公式。
+\item dynamic  logic
+\item separation  logic
+\end{enumerate}
+
+ Hoare's  loop invariants
+\\ 本文提出了自然数定量化的一阶逻辑  \( [0, n]\), 预定义的离散型线性序列。可以用来解决并行程序。
+\\ 一阶逻辑的定义就是非量化
+\\ The  purpose  of  this  paper  is  to  describe  how  this  set  of  axioms  can  be  systematically  generated,  and  show  by  some  examples  how  reasoning  can  be  done  with  this  set  of  axioms.  Without  going  into  details,  one  can  already  see  that  unlike  Hoare’s  logic,  our  axiomatization  does  not  make  use  of  loop  invariants.  One  can  also  see  that  unlike  typical  temporal  logic specification  of  a  program,  we  do  not  need  a  transition  system  model  of  the  program,  and  do  not  need  to  keep  track  of  program  execution  traces.  We  will  discuss  related  work  in  more  detail  later.
+\begin{description}
+\item[1]  文章基本就是推理。
+\item[2]  推理没有使用循环不变性，即循环次数可变。
+\item[3]  没有使用转移系统模型。用来描述离散系统的表现，包括状态，以及过渡状态。
+\end{description}
+
+%------------------------------------------------
+
+%\section{Methodology Overview} % Numbered section
+
+
+
+%------------------------------------------------
+
+%\section{Results Overview}
+
+
+
+%------------------------------------------------
+
+%\section{Discussion/Conclusions Overview}
+
+
+
+%------------------------------------------------
+
+\section*{Article Evaluation}
+AI文章果然看不懂，数学推理看的一脸懵逼
+\\ 大概意思应该是提出了一种方法，方便并行程序的执行。
+\\ 可能可以用在并行语言的设计上。具体太难，完全看不懂。
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{Reference} % Change the default bibliography title
+
+\bibliography{11162016} % Input your bibliography file
+
+%----------------------------------------------------------------------------------------
+\end{CJK*}
+\end{document}

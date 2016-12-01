@@ -1,0 +1,80 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Default font size is 10pt, can alternatively be 11pt or 12pt
+a4paper, % Alternatively letterpaper for US letter
+onecolumn, % Alternatively onecolumn，twocolumn
+portrait % Alternatively portrait，landscape
+]{article}
+
+\usepackage{CJKutf8}
+
+\input{structure.tex} % Input the file specifying the document layout and structure
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\articletitle{ A minimum expected regret model for the shortest path problem with solution-dependent probability distributions} % The title of the article
+\articlecitation{\cite{Conde_A_2017}} % The BibTeX citation key from your bibliography
+
+\datenotesstarted{November 25, 2016} % The date when these notes were first made
+\docdate{\datenotesstarted; rev. \today} % The date when the notes were lasted updated (automatically the current date)
+
+\docauthor{QZ} % Your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+\pagestyle{myheadings} % Use custom headers
+\markright{\doctitle} % Place the article information into the header
+
+%----------------------------------------------------------------------------------------
+%	PRINT ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{plain} % Plain formatting on the first page
+
+\printtitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE NOTES
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction} % Unnumbered section
+
+We consider an optimization problem in which the cost of a feasible solution depends on a set of un-
+ known parameters (scenario) that will be realized. In order to assess the cost of implementing a given
+ solution, its performance is compared with the optimal one under each feasible scenario. The positive
+ difference between the objective values of both solutions denes the regret corresponding to a   xed
+ scenario. The proposed optimization model will seek for a compromise solution by minimizing the ex-
+ pected regret where the expectation is taken respect to a probability distribution that depends on the
+ same solution that is being evaluated, which is called solution-dependent probability distribution. We
+ study the optimization model obtained by applying a specic family of solution-dependent probability
+ distributions to the shortest path problem where the unknown parameters are the arc lengths of the
+ network. This approach can be used to generate new models for robust optimization where the degree of
+ conservatism   is   calibrated   by   using   different   families   of   probability   distributions   for   the   unknown
+ parameters.
+
+目标函数的不确定性
+有约束条件
+
+ Robustness Analysis
+ and   Stochastic   Programming
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{Reference} % Change the default bibliography title
+
+\bibliography{11162016} % Input your bibliography file
+
+%----------------------------------------------------------------------------------------
+\end{CJK*}
+\end{document}

@@ -1,0 +1,132 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Default font size is 10pt, can alternatively be 11pt or 12pt
+a4paper, % Alternatively letterpaper for US letter
+onecolumn, % Alternatively onecolumn，twocolumn
+portrait % Alternatively portrait，landscape
+]{article}
+
+\usepackage{CJKutf8}
+
+\input{structure.tex} % Input the file specifying the document layout and structure
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\articletitle{ Multi-objective particle swarm optimization based on global margin ranking} % The title of the article
+\articlecitation{\cite{Li_Multi_2017}} % The BibTeX citation key from your bibliography
+
+\datenotesstarted{December 01, 2016} % The date when these notes were first made
+\docdate{\datenotesstarted; rev. \today} % The date when the notes were lasted updated (automatically the current date)
+
+\docauthor{QZ} % Your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+\pagestyle{myheadings} % Use custom headers
+\markright{\doctitle} % Place the article information into the header
+
+%----------------------------------------------------------------------------------------
+%	PRINT ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{plain} % Plain formatting on the first page
+
+\printtitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE NOTES
+%----------------------------------------------------------------------------------------
+
+\section{New Concepts} % Unnumbered section
+
+\begin{enumerate}
+\item  non-dominated sorting 遗传算法中的一个概念，对多目标问题比较多  
+\item  NSGA Non-dominated Sorting Genetic Algorithm
+\item  Pareto efficiency
+\item Pareto improvement 至少一个目标能够更好，同时保证其他目标不会恶化
+\item Pareto frontier For a given system, the Pareto frontier or Pareto set is the set of parameterizations (allocations) that are all Pareto efficient. 
+\item 数据的归一化处理
+\end{enumerate}
+
+ adaptive fit of a population of candidate solutions to a Pareto front constrained by a set of objective functions
+
+数据归一化的目的是为了把不同来源的数据统一到一个参考系下，这样比较起来才有意义。情况太多了，真的不知道怎么举例子。 
+
+主要看模型是否具有伸缩不变性。
+
+有些模型在各个维度进行不均匀伸缩后，最优解与原来不等价，例如SVM。对于这样的模型，除非本来各维数据的分布范围就比较接近，否则必须进行标准化，以免模型参数被分布范围较大或较小的数据dominate。
+
+有些模型在各个维度进行不均匀伸缩后，最优解与原来等价，例如logistic regression。对于这样的模型，是否标准化理论上不会改变最优解。但是，由于实际求解往往使用迭代算法，如果目标函数的形状太“扁”，迭代算法可能收敛得很慢甚至不收敛。所以对于具有伸缩不变性的模型，最好也进行数据标准化。 
+
+
+%------------------------------------------------
+
+\section{Questions} % Numbered section
+
+\begin{description}
+\item[1]  How Pareto is introduced to multi-objective problems? Is it because the Pareto is dealing with how to improve one object and keep others safe? 
+\item[2]  Who firstly brought Pareto into this area?
+\item[2]  Is there any other theories that can be used in multi-objective problem?
+\item[3]  What is the solution of the MOP?
+
+
+\end{description}
+
+
+%------------------------------------------------
+\section{Interesting Points}
+ Coello bring PSO to multi-objective 2002
+  C.A.C.  Coello  ,  M.S.  Lechuga  ,  MOPSO:  a  proposal  for  multiple  objective  particle  swarm  optimization,  in:  Evolutionary  Computation,  2002.  CEC’02.  Pro- 
+ ceedings  of  the  2002  Congress  on,  vol.  2,  IEEE,  2002,  pp.  1051–1056  . 
+
+Using Pareto to solve MOP  Pareto-based dominance strategy 
+  S.  Biswas,  S.  Das,  P.N.  Suganthan,  C.A.C.  Coello,  Evolutionary  multiobjective  optimization  in  dynamic  environments:  a  set  of  novel  benchmark  functions, 
+ in:  2014  IEEE  Congress  on  Evolutionary  Computation  (CEC),  IEEE,  2014,  pp.  3192–3199,  doi:  10.1109/CEC.2014.6900487  . 
+
+%------------------------------------------------
+
+%\section{Discussion/Conclusions Overview}
+
+
+
+%------------------------------------------------
+
+\section*{Article Evaluation}
+本文主要是针对多目标优化问题中，非支配排序的的效率问题，提出了一种GMR的的算法，能够在目标空间中占主导地位。
+考虑了种群的分布，粒子间的通信，调节参数（没有/很少）
+GMR可以多多目标的PSO有优化，针对个体的密度问题
+
+多目标问题需要解决的点
+simplify  and  accelerate  the  process  of  dominance  relation  assessment.
+ gBest  and  pBest  selection  strategy  is  conducted  for  MOPSO.? 为什么？ gBest, pBest应该是最大值，为什么还要选择？
+
+MOPSO增加了一个步骤，Trimming external archive？
+在选择best值上单多目标问题不一样
+
+大概思路是
+
+选择gBest和pBest时使用不同的方法来避免局部最优解的产生
+external archive会使解不归一化
+
+不是很好懂
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{Reference} % Change the default bibliography title
+
+\bibliography{11162016} % Input your bibliography file
+
+%----------------------------------------------------------------------------------------
+\end{CJK*}
+\end{document}

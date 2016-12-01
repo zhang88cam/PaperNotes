@@ -1,0 +1,115 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Article Notes
+% LaTeX Template
+% Version 1.0 (1/10/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@latextemplates.com)
+% Christopher Eliot (christopher.eliot@hofstra.edu)
+% Anthony Dardis (anthony.dardis@hofstra.edu)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Default font size is 10pt, can alternatively be 11pt or 12pt
+a4paper, % Alternatively letterpaper for US letter
+onecolumn, % Alternatively onecolumn，twocolumn
+portrait % Alternatively portrait，landscape
+]{article}
+
+\usepackage{CJKutf8}
+
+\input{structure.tex} % Input the file specifying the document layout and structure
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\articletitle{ TLBO strategy} % The title of the article
+\articlecitation{\cite{Zhang_Parameter_2015}} % The BibTeX citation key from your bibliography
+
+\datenotesstarted{November 22, 2016} % The date when these notes were first made
+\docdate{\datenotesstarted; rev. \today} % The date when the notes were lasted updated (automatically the current date)
+
+\docauthor{QZ} % Your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+\pagestyle{myheadings} % Use custom headers
+\markright{\doctitle} % Place the article information into the header
+
+%----------------------------------------------------------------------------------------
+%	PRINT ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{plain} % Plain formatting on the first page
+
+\printtitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE NOTES
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction} % Unnumbered section
+
+Compared with GA, PSO and DEA, TLBO has some attractive
+ characteristics. First, it employs simple differential operation
+ between teacher and students to create new candidate solu-
+ tions, as well as to guide the search toward the most promising
+ region. Second, TLBO works with real numbers in natural
+ manner and avoid complicated generic searching operators
+ in GA, and twofold updating strategy in PSO. Third, the
+ conventional TLBO only contains one adjustable controlling
+ parameter (i.e., population size), which facilitates easy tun-
+ ing and implementation, while in GA, PSO and DEA more
+ parameters need to be set in an appropriate manner so as to
+ guarantee the searching performance.
+
+
+er so as to
+ guarantee the searching performance. Nowadays, TLBO has
+ attracted attention and applications in a few elds since its
+ birth in 2011 (Patel and Savsani; Crepinsek et al. 2012; Wagh-
+ mare 2013). For instance, Rao and Patel (2013c) enhanced
+ the conventional TLBO to form M-TLBO (named by the
+ authors of this paper) by incorporating three operations, i.e.,
+ group learning (number of teachers), adaptive teaching fac-
+ tor and self-motivated learning. I-TLBO (Patel and Savsani
+ 2014a, b) was developed by introducing an additional oper-
+ ation, labeled as learning through tutorial operator into the
+ above M-TLBO. Application areas cover dynamic economic
+ emission dispatch (Niknam et al. 2012), structural optimiza-
+ tion (Dede 2013), power system (García Ansola et al. 2012),
+ heat exchangers (Rao and Patel 2013b; Patel and Savsani
+ 2014b), thermoelectric cooler (V enkata Rao and Patel 2013)
+ and engineering optimization problems (Y u et al. 2014), etc.,
+ which demonstrate the effectiveness and efciency of the
+ TLBO-based algorithms.
+
+使用TLBO解决实际问题的一篇文章
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{Reference} % Change the default bibliography title
+
+\bibliography{11162016} % Input your bibliography file
+
+%----------------------------------------------------------------------------------------
+\end{CJK*}
+\end{document}
